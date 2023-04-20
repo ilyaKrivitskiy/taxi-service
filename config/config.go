@@ -18,19 +18,19 @@ type Log struct {
 	Level string `env-required:"true" yaml:"log_level"   env:"LOG_LEVEL"`
 }
 
-type DB struct {
-	Username string `env-required:"true" yaml:"db_username"   env:"DB_USERNAME"`
-	Host     string `env-required:"true" yaml:"db_host"   env:"DB_HOST"`
-	Port     string `env-required:"true" yaml:"db_port"   env:"DB_PORT"`
-	Name     string `env-required:"true" yaml:"db_name" env:"DB_NAME"`
-	SslMode  string `env-required:"true" yaml:"db_sslmode" env:"DB_SSLMODE"`
-}
+//type DB struct {
+//	Username string `env-required:"true" yaml:"db_username"   env:"DB_USERNAME"`
+//	Host     string `env-required:"true" yaml:"db_host"   env:"DB_HOST"`
+//	Port     string `env-required:"true" yaml:"db_port"   env:"DB_PORT"`
+//	Name     string `env-required:"true" yaml:"db_name" env:"DB_NAME"`
+//	SslMode  string `env-required:"true" yaml:"db_sslmode" env:"DB_SSLMODE"`
+//}
 
 type Config struct {
 	App  `yaml:"app"`
 	HTTP `yaml:"http"`
 	Log  `yaml:"logger"`
-	DB   `yaml:"databases"`
+	//DB   `yaml:"databases"`
 }
 
 func NewConfig() (*Config, error) {
