@@ -1,1 +1,4 @@
-# taxi-service
+# Taxi Service
+
+Taxi project for BSU.
+

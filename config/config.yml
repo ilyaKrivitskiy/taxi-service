@@ -1,0 +1,17 @@
+app:
+  name: 'taxi-service'
+  version: '1.0.0'
+
+http:
+  port: '8000'
+
+logger:
+  log_level: 'debug'
+  rollbar_env: 'taxi-service'
+
+db:
+  username: "ilia"
+  host: "localhost"
+  port: "5432"
+  dbname: "taxidb"
+  sslmode: "disable"
