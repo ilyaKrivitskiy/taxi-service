@@ -1,10 +1,18 @@
 package repository
 
-type Authorization interface {
+type UserAuthorization interface {
+}
+
+type DriverAuthorization interface {
+}
+
+type Order interface {
 }
 
 type Repository struct {
-	Authorization
+	UserAuthorization
+	DriverAuthorization
+	Order
 }
 
 func NewRepository() *Repository {

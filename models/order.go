@@ -1,4 +1,4 @@
-package entity
+package models
 
 type Order struct {
 	UserId   uint   `json:"user_id"`

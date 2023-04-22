@@ -16,10 +16,28 @@ func NewHandler(servicies *service.Service) *Handler {
 func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
 
-	auth := router.Group("/auth")
+	authUser := router.Group("/auth")
 	{
-		auth.POST("/sign-up", h.signUp)
-		auth.POST("/sign-in", h.signIn)
+		authUser.POST("/sign-up", h.userSignUp)
+		authUser.POST("/sign-in", h.userSignIn)
+	}
+
+	authDriver := router.Group("/auth")
+	{
+		authDriver.POST("/sign-up", h.driverSignUp)
+		authDriver.POST("/sign-in", h.driverSignIn)
+	}
+
+	api := router.Group("/api")
+	{
+		orders := api.Group("/orders")
+		{
+			orders.POST("/", h.createOrder)
+			orders.GET("/", h.getAllOrders)
+			orders.GET("/:id", h.getOrderById)
+			orders.PUT("/:id", h.updateOrder)
+			orders.DELETE("/:id", h.deleteOrder)
+		}
 	}
 
 	return router

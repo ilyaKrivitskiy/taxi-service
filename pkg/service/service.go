@@ -2,11 +2,19 @@ package service
 
 import "github.com/ilyaKrivitskiy/taxi-service/pkg/repository"
 
-type Authorization interface {
+type UserAuthorization interface {
+}
+
+type DriverAuthorization interface {
+}
+
+type Order interface {
 }
 
 type Service struct {
-	Authorization
+	UserAuthorization
+	DriverAuthorization
+	Order
 }
 
 func NewService(rep *repository.Repository) *Service {
