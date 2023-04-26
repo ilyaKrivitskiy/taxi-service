@@ -10,8 +10,8 @@ logger:
   rollbar_env: 'taxi-service'
 
 db:
-  username: "ilia"
   host: "localhost"
   port: "5432"
+  username: "postgres"
   dbname: "taxidb"
   sslmode: "disable"
