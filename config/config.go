@@ -14,10 +14,6 @@ type HTTP struct {
 	Port string `env-required:"true" yaml:"port" env:"HTTP_PORT"`
 }
 
-type Log struct {
-	Level string `env-required:"true" yaml:"log_level"   env:"LOG_LEVEL"`
-}
-
 type DB struct {
 	Host     string `env-required:"true" yaml:"host"   env:"DB_HOST"`
 	Port     string `env-required:"true" yaml:"port"   env:"DB_PORT"`
@@ -29,7 +25,6 @@ type DB struct {
 type Config struct {
 	App  `yaml:"app"`
 	HTTP `yaml:"http"`
-	Log  `yaml:"logger"`
 	DB   `yaml:"db"`
 }
 

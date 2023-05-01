@@ -11,7 +11,7 @@ logger:
 
 db:
   host: "localhost"
-  port: "5432"
+  port: "5436"
   username: "postgres"
   dbname: "taxidb"
   sslmode: "disable"

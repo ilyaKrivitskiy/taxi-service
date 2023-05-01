@@ -10,14 +10,12 @@ import (
 	"os"
 )
 
-//type ConfigDB struct {
-//	Host     string
-//	Port     string
-//	Username string
-//	Password string
-//	DBName   string
-//	SSLMode  string
-//}
+const (
+	usersTable   = "users"
+	driversTable = "drivers"
+	ordersTable  = "orders"
+	tripsTable   = "trips"
+)
 
 func NewPostgresDB(cfg *config.Config) (*sqlx.DB, error) {
 

@@ -5,7 +5,6 @@ CREATE TABLE users
     email         varchar(255) not null unique,
     username      varchar(255) not null unique,
     password_hash varchar(255) not null
-    /*rating numeric default 5 check ( rating >= 0 and rating <= 5)*/
 );
 
 CREATE TABLE drivers

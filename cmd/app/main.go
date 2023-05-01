@@ -8,6 +8,8 @@ import (
 )
 
 func main() {
+	logrus.SetFormatter(new(logrus.JSONFormatter))
+
 	cfg, err := config.NewConfig()
 	if err != nil {
 		logrus.Fatalf("Config error: %s", err.Error())
