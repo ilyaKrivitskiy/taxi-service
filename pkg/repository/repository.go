@@ -7,6 +7,7 @@ import (
 
 type UserAuthorization interface {
 	CreateUser(user models.User) (int, error)
+	GetUser(username, password string) (models.User, error)
 }
 
 type DriverAuthorization interface {
